@@ -12,6 +12,7 @@ Imports:
     readxl,
     snakecase,
     stringr,
+    targets,
     tidyr
 Suggests: 
     gitcreds,
