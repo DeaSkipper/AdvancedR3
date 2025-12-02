@@ -8,10 +8,12 @@ Imports:
     fs,
     here,
     pak,
+    quarto,
     readr,
     readxl,
     snakecase,
     stringr,
+    tarchetypes,
     targets,
     tidyr
 Suggests: 
