@@ -17,3 +17,5 @@ Suggests:
     gitcreds,
     styler,
     usethis
+URL: https://github.com/DeaSkipper/AdvancedR3
+BugReports: https://github.com/DeaSkipper/AdvancedR3/issues
