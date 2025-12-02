@@ -1,10 +1,7 @@
-TODO: Add more to the title of your project here
+# DDEA AdvancedR3 pipeline course:
 
-# AdvancedR3:
-
-TODO: Give a brief description of what your project is about
-
-This project...
+This project is about learning how to write more reproducible code and
+set up workflows that are easy for yourself and others to follow.
 
 # Brief description of folder and file contents
 
@@ -21,8 +18,8 @@ The following folders contain:
 
 If dependencies have been managed by using
 `usethis::use_package("packagename")` through the `DESCRIPTION` file,
-installing dependencies is as easy as opening the
-`AdvancedR3.Rproj` file and running this command in the console:
+installing dependencies is as easy as opening the `AdvancedR3.Rproj`
+file and running this command in the console:
 
 ```         
 # install.packages("pak")
@@ -36,3 +33,4 @@ You'll need to have remotes installed for this to work.
 For more information on this folder and file workflow and setup, check
 out the [prodigenr](https://rostools.github.io/prodigenr) online
 documentation.
+
