@@ -13,3 +13,5 @@ Imports:
     snakecase,
     stringr,
     tidyr
+Suggests: 
+    usethis
