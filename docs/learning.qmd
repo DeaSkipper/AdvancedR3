@@ -24,3 +24,10 @@ tar_read(table_descriptive_stats) |>
     caption = "The mean and standard deviation of metabolites in the lipidomics dataset."
   )
 ```
+
+## Results: Distribution plot
+
+```{r}
+tar_read(plot_distributions) |>
+  print()
+```

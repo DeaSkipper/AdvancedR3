@@ -2,5 +2,7 @@ name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iterat
 file|stem|c44b806f3841f535|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20404.3141891787s|s24277b|24277|file|local|vector|||0||
 lipidomics|stem|5e6436bf4de301bd|0c7a386d4ea38074|e88672c19d0c6d6c|-1498393010||t20424.5833932679s|s4883b|4883|rds|local|vector|||0.25||
 table_descriptive_stats|stem|80a7ef81f02a8d32|34e33bc9eaef7fce|7a27de817b939597|1291134815||t20425.3888318719s|s417b|417|rds|local|vector|||0.031||
+plot_distributions|stem|2b99e567d44e8333|01ce942be37808d6|ecbb0f38d2e91700|222080706||t20425.4202183973s|s271691b|271691|rds|local|vector|||0.594||
 create_table_descriptive_stats|function|19b88138ac459d02
-quarto_doc|stem|da3e82b2b381a4fc|946569ef20e4a1f9|a746d1da614ac61f|1582462002|docs/learning.html*docs/learning.qmd|t20425.4110965339s|s27216b|27216|file|local|vector|||8.14|pakke 'quarto' blev bygget under R version 4.5.2|
+create_plot_distributions|function|b411ca55e4bdd968
+quarto_doc|stem|6769ed43752beefd|17ff11b3307356f6|06fa3ca21ab34d4e|1582462002|docs/learning.html*docs/learning.qmd|t20425.4223190151s|s26436b|26436|file|local|vector|||8.187|pakke 'quarto' blev bygget under R version 4.5.2|
