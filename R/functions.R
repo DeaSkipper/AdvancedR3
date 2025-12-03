@@ -37,3 +37,15 @@ create_plot_distributions <- function(data) {
       y = "Counts"
     )
 }
+
+#' Clean data and average over duplicates
+#'
+#' @param data
+#'
+#' @returns "A data frame"
+clean <- function(data){
+  data |>
+    dplyr::group_by(pick(-value)) |>
+    dplyr::summarise(value = mean(value), .groups = "keep") |>
+    dplyr::ungroup()
+}

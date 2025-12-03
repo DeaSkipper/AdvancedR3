@@ -57,7 +57,8 @@ list(
   ),
   tar_target(
     name = lipidomics,
-    command = readr::read_csv(file, show_col_types = F)
+    command = readr::read_csv(file, show_col_types = F) |>
+      clean()
   ),
   tar_quarto(
     name = quarto_doc,
