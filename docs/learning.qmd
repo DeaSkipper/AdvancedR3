@@ -17,16 +17,5 @@ lipidomics <- tar_read(lipidomics)
 ## Making a table
 
 ```{r}
-lipidomics |>
-  group_by(metabolite) |>
-  summarise(across(
-    value,
-    list(mean = mean, sd = sd)
-  )) |>
-  mutate(across(
-    where(is.numeric),
-    \(x) round(x, digits = 1)
-  )) |>
-  mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) |>
-  select(Metabolite = metabolite, "Mean SD" = MeanSD)
+create_table_descriptive_stats(lipidomics)
 ```

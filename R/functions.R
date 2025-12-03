@@ -11,7 +11,7 @@ create_table_descriptive_stats <- function(data) {
       list(mean = mean, sd = sd)
     )) |>
     dplyr::mutate(across(
-      where(is.numeric),
+      tidyselect::where(is.numeric),
       \(x) round(x, digits = 1)
     )) |>
     dplyr::mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) |>
