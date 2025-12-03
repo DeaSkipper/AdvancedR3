@@ -6,6 +6,7 @@ Encoding: UTF-8
 Imports: 
     dplyr,
     fs,
+    glue,
     here,
     pak,
     quarto,
@@ -22,3 +23,5 @@ Suggests:
     usethis
 URL: https://github.com/DeaSkipper/AdvancedR3
 BugReports: https://github.com/DeaSkipper/AdvancedR3/issues
+Depends: 
+    tidyverse
