@@ -43,7 +43,7 @@ create_plot_distributions <- function(data) {
 #' @param data
 #'
 #' @returns "A data frame"
-clean <- function(data){
+clean <- function(data) {
   data |>
     dplyr::group_by(pick(-value)) |>
     dplyr::summarise(value = mean(value), .groups = "keep") |>
@@ -55,10 +55,41 @@ clean <- function(data){
 #' @param data
 #'
 #' @returns "A data frame"
-preprocess <- function(data){
+preprocess <- function(data) {
   data |>
     dplyr::mutate(
       class = as.factor(class),
       value = scale(value)
     )
+}
+#' Fit data
+#'
+#' @param data
+#' @param model
+#'
+#' @returns "Model results"
+fit_model <- function(data, model) {
+  glm(
+    formula = model,
+    data = data,
+    family = binomial
+  ) |>
+    broom::tidy(exponentiate = TRUE) |>
+    dplyr::mutate(
+      metabolite = unique(data$metabolite),
+      model = format(model),
+      .before = everything()
+    )
+}
+
+#' Create model results
+#'
+#' @param data
+#'
+#' @returns "Model results for cholesterol"
+create_model_results <- function(data) {
+  data |>
+    dplyr::filter(metabolite == "Cholesterol") |>
+    preprocess() |>
+    fit_model(class ~ value)
 }
