@@ -24,15 +24,3 @@ tar_read(table_descriptive_stats) |>
     caption = "The mean and standard deviation of metabolites in the lipidomics dataset."
   )
 ```
-
-## Plot of distributions
-
-```{r}
-ggplot(
-  lipidomics,
-  aes(x = value)
-) +
-  geom_histogram() +
-  facet_wrap(vars(metabolite), scales = "free") +
-  theme_minimal()
-```

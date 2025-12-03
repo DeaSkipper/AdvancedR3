@@ -17,3 +17,16 @@ create_table_descriptive_stats <- function(data) {
     dplyr::mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) |>
     dplyr::select(Metabolite = metabolite, "Mean SD" = MeanSD)
 }
+
+#' Plot of metabolite distributions
+#'
+#' @param data
+#'
+#' @returns "A plot object"
+create_plot_distributions <- function(data) {
+  data |>
+    ggplot2::ggplot(aes(x = value)) +
+    geom_histogram() +
+    facet_wrap(vars(metabolite), scales = "free") +
+    theme_minimal()
+}
