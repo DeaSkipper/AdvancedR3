@@ -93,3 +93,17 @@ create_model_results <- function(data) {
     preprocess() |>
     fit_model(class ~ value)
 }
+
+#' Fit all models
+#'
+#' @param data
+#'
+#' @returns "Model results"
+fit_all_models <- function(data) {
+  list(
+    class ~ value,
+    class ~ value + gender + age
+  ) |>
+    purrr::map(\(model) fit_model(data, model = model)) |>
+    purrr::list_rbind()
+}

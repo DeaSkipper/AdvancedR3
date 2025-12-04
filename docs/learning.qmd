@@ -32,6 +32,12 @@ tar_read(plot_distributions) |>
   print()
 ```
 
-```{r}
+## Running multiple models
 
+```{r}
+lipidomics |>
+  group_split(metabolite) |>
+  map(preprocess) |>
+  map(fit_all_models) |>
+  list_rbind()
 ```
