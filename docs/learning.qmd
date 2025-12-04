@@ -32,12 +32,11 @@ tar_read(plot_distributions) |>
   print()
 ```
 
-## Running multiple models
+## Appendix
 
 ```{r}
-lipidomics |>
-  group_split(metabolite) |>
-  map(preprocess) |>
-  map(fit_all_models) |>
-  list_rbind()
+tar_read(model_results) |> 
+    knitr::kable(
+    caption = "All model results from all metabolites."
+  )
 ```
