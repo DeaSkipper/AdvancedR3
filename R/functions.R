@@ -108,3 +108,28 @@ create_model_results <- function(data) {
     purrr::map(fit_all_models) |>
     purrr::list_rbind()
 }
+
+#' Plot model results
+#'
+#' @param results
+#'
+#' @returns
+create_plot_model_results <- function(results) {
+  results |>
+    dplyr::filter(
+      term == "value",
+      std.error <= 2,
+      estimate <= 5,
+    ) |>
+    dplyr::select(metabolite, model, estimate, std.error) |>
+    ggplot2::ggplot(ggplot2::aes(
+      x = estimate,
+      y = metabolite,
+      xmin = estimate - std.error,
+      xmax = estimate + std.error
+    )) +
+    ggplot2::geom_pointrange() +
+    ggplot2::geom_vline(xintercept = 1, linetype = "dashed") +
+    ggplot2::facet_grid(cols = ggplot2::vars(model)) +
+    ggplot2::theme_minimal()
+}

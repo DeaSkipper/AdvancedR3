@@ -7,8 +7,10 @@ model_results|stem|96c87645c640e4a1|8dc321a94f7f9089|b0471e82c74d1171|-152361106
 fit_model|function|42ced90c28e96efa
 preprocess|function|27efdd529f320467
 clean|function|a25c747e7ca60147
+create_plot_model_results|function|ad6395f1527b3c9d
 create_table_descriptive_stats|function|d30baa48f14366e2
 create_plot_distributions|function|a1440a97cb7b6c17
 fit_all_models|function|41352493470152d6
 create_model_results|function|b3fb2514719fd2a7
-quarto_doc|stem|a7b117529db1492e|84a9b6a5242fc083|bd4a78644f1107a3|1582462002|docs/learning.html*docs/learning.qmd|t20426.4225911914s|s55184b|55184|file|local|vector|||8.812|pakke 'quarto' blev bygget under R version 4.5.2|
+plot_model_results|stem|91ffdfc8868b5b87|96cd43e688d135de|d6208c49486d870a|384392714||t20426.4575290903s|s251387b|251387|rds|local|vector|||0.563||
+quarto_doc|stem|4cbeb3bac9961c1c|85e3021bfda29f22|36ae240d9154a419|1582462002|docs/learning.html*docs/learning.qmd|t20426.4576282639s|s56090b|56090|file|local|vector|||8.563|pakke 'quarto' blev bygget under R version 4.5.2|
